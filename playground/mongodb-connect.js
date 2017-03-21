@@ -15,7 +15,25 @@ db.collection('Todos').insertOne({
   }
   // console.log(JSON.stringify(result.aps, undefined, 2));
   console.log(JSON.stringify(result.ops, undefined, 2));
+
 });
+
+//new collection . doc into Users {name, age, location}
+
+db.collection('Users').insertOne({
+  name:'Felipe',
+  age: 38,
+  location: 'Chile'
+}, (err, result) => {
+  if (err) {
+    return console.log('Unable to insert Users', err);
+  }
+  console.log(JSON.stringify(result.ops, undefined, 2));
+
+});
+
+
+
 
   db.close();
 });
