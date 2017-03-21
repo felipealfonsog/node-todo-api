@@ -13,8 +13,13 @@ db.collection('Todos').insertOne({
   if (err) {
     return console.log('Unable to insert todo', err);
   }
-  console.log(JSON.stringify(result.aps, undefined, 2));
+  // console.log(JSON.stringify(result.aps, undefined, 2));
+  console.log(JSON.stringify(result.ops, undefined, 2));
 });
 
   db.close();
 });
+
+
+
+// -------
