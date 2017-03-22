@@ -27,8 +27,8 @@ db.collection('Todos').find().count().then((count) => {
     });
 
 
-
-    db.collection('Users').find({name:'Andrew'}).ToArray().then((docs) => {
+// tuis is a query that we made ===> 
+    db.collection('Users').find({name:'Felipe'}).toArray().then((docs) => {
        console.log(JSON.stringify(docs, undefined, 2));
     });
 
