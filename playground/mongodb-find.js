@@ -18,16 +18,14 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
 //   console.log('Unable to fetch todos', err);
 // });
 
-
-db.collection('Todos').find().count().then((count) => {
-// counting all the docuements (rows)
-      console.log(`Todos count:${count}`);
-    }, (err) => {
-      console.log('Unable to fetch todos', err);
-    });
+// db.colection('Todos').find().count().them((count) => {
+//    console.log(`Todos count: ${count}`);
+// } (err) => {
+//   console.log('Unable to fetch todos', err);
+// });
 
 
-// tuis is a query that we made ===> 
+// tuis is a query that we made ===>
     db.collection('Users').find({name:'Felipe'}).toArray().then((docs) => {
        console.log(JSON.stringify(docs, undefined, 2));
     });
